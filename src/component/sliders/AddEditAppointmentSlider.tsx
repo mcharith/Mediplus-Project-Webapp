@@ -68,7 +68,6 @@ const AddEditAppointmentSlider = ({ isOpen, onClose,selectedAppointment,onSaveSu
     const handleSave = async () => {
         setErrors({});
 
-        // ✅ Frontend validation
         if (!patientId || !doctorId || !date) {
             setErrors({
                 patientId: !patientId ? "Patient is required" : "",
