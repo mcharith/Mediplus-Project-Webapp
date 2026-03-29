@@ -2,11 +2,11 @@ import { useEffect, useState, useRef } from "react";
 import { FiPlus, FiEdit, FiTrash2 } from "react-icons/fi";
 import { ClipLoader } from "react-spinners";
 import toast from "react-hot-toast";
-import {type Appointment} from "../types/Appointment.ts";
 import AddEditAppointmentSlider from "../component/sliders/AddEditAppointmentSlider.tsx";
 import {deleteAppointment, getAllAppointments, getAppointmentById} from "../service/appointmentService.ts";
+import type {Appointment} from "../types/Appointment.ts";
 
-const Appointment = () => {
+export const AppointmentPage = () => {
     const [appointments, setAppointment] = useState<Appointment[]>([]);
     const [loading, setLoading] = useState(false);
 
@@ -212,4 +212,4 @@ const Appointment = () => {
     );
 };
 
-export default Appointment;
+export default AppointmentPage;
